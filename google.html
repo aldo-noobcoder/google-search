@@ -84,7 +84,7 @@
         border-style: none;
         }
        .button{
-        bottom: 20px;
+        bottom: 80px;
         right: 20px;
         position: fixed;
         width: 150px;
@@ -100,11 +100,20 @@
     button{
         width: 150px;
         height: 40px;
-       
         color: white;
         background-color: #3f4a3c;
         border-style: none;
         margin-top: 20px;
+    }
+    .login-btn{
+            display: inline-block;
+            height: 40px;
+            width: 85px;
+            background-color: rgb(74, 74, 255);
+            border-radius: 20px;
+            color: white;
+            line-height: 20px;
+            text-align: center;
     }
     @keyframes posisition{
         0%{
@@ -166,7 +175,6 @@
     .footer{
         position: absolute;
         bottom: 0px;
-        left: 0px;
         height: 80px;
         width: 100%;
         background-color: rgb(47, 52, 46);
@@ -186,7 +194,7 @@
                     audio.play();
                 }
              </script>
-            <a id="d" href="https://accounts.google.com/" target="_blank">Log in</a>
+            <a class="login-btn" id="d" href="https://accounts.google.com/" target="_blank">Log in</a>
         </nav>
     <div class="div">
         <img src="google.png" alt="google">
@@ -202,7 +210,7 @@
             </div>
         </div>
         <footer>
-            <div class="footer">
+            <div class="footer" id="footers">
             <button class="button" id="ae" onclick="dosomething()">Customize Chrome</button>
             <script>
             var eleement =  document.getElementById("ae")
@@ -217,7 +225,7 @@
                 document.getElementById("a").style.color = "grey"
                 document.getElementById("b").style.color = "grey"
                 document.getElementById("c").style.color = "grey"
-                document.getElementById("d").style.color = "grey"
+                document.getElementById("d").style.boxShadow = "5px 5px 7px darkgrey"
                 button.style.backgroundColor ="white"
                 button.style.boxShadow = "5px 5px 10px darkgrey"
                 button.style.color = "grey"
@@ -226,6 +234,7 @@
                 button2.style.color = "grey"
                 document.getElementById("ae").innerHTML = "if u want it back pls refresh i dont know how to code this yet"
                 document.getElementById("ae").style.width = "400px"
+                document.getElementById("footers").style.backgroundColor = "#cdcdcd";
             }
             // lol maaf banyak nian kodenya blm tau how javascript kerja 
          </script>
