@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Google</title>
+</head>
+<head>
+    <style>
+        body{
+            background-color: #373d35ff;
+            height: 100vh;
+        }
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            color: white;
+            text-decoration: none;
+            transition: 0.5s ease-in-out;
+            outline: none;
+        }
+        nav a{
+            margin: 0px 0px;
+            float: right;
+            padding: 10px;
+            font-family: "Roboto",Arial, sans-serif;
+            font-size: 15px;
+            margin-top: 13px;
+        }
+        nav a:hover{text-decoration: underline;opacity: 0.5;transition: 0.3s;}
+        .nav4{
+            margin-right: 20px;
+        }
+        .div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)translateY(-150px); 
+            height: fit-content;
+            width: fit-content;
+            display: inline-block;
+            text-align: center;
+        }
+        .div2{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%)translateY(130px); 
+            
+            display: inline-block;
+         
+        }
+        .div img{
+            margin: 0px 0px 0px 0px;
+            width: 500px;
+            height:  fit-content;
+            object-fit: contain;
+            display: block;
+            position: relative;
+            margin-bottom: 40px;
+        }
+        div input{
+        background: 
+            url('search.png') no-repeat left , 
+            url('mic logo.png') no-repeat right center ,
+            url('camera logo.png') no-repeat right ;
+        background-size: 25px 25px,30px 30px ,30px 30px;
+        background-position-x: 20px,490px,530px;
+        padding-left: 20px;
+        background-color: white;
+        width: 570px;
+        border-radius: 50px;
+        height: 43px;
+        margin-top: 40px;
+        padding-left: 60px;
+        color: black;
+        font-size: 15px;
+        font-family: "Roboto";
+        border-style: none;
+        }
+       .button{
+        bottom: 20px;
+        right: 20px;
+        position: fixed;
+        width: 150px;
+        height: 40px;
+        border-radius: 50px;
+        color: white;
+        background-color: #3f4a3c;
+        border-style: none;
+        box-shadow: 5px 5px 10px black;
+        margin-bottom: 20px;
+        box-shadow: 5px 5px 10px rgb(55, 55, 55);
+    }
+    button{
+        width: 150px;
+        height: 40px;
+       
+        color: white;
+        background-color: #3f4a3c;
+        border-style: none;
+        margin-top: 20px;
+    }
+    @keyframes posisition{
+        0%{
+            transform: scale(5);
+        }
+        25%{
+            transform: rotate(270deg);
+            opacity: 1;
+        }
+        50%{
+            transform: translate(2000px);
+            opacity: 1;
+        }
+    }
+    .wee:active{
+        animation: posisition 3s ;
+    }
+   button:hover{
+        opacity: 0.5;
+        transition: 0.3s;
+    }
+    .yee{
+        margin-right: 30px;
+    
+    }
+    @keyframes boo{
+        0%{
+            transform: translateY(0);
+        }
+        50%{
+            transform: translatey(-200px);
+            color: transparent;
+        }
+       100%{
+            background-image: url(image.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            transform: scale(20);
+            color: transparent;
+        }
+    }
+    .yee:active{
+        animation: boo 0.8s ease-in
+    }
+    @keyframes yes{
+        0%{
+            transform: translateY(0);
+        }
+        50%{
+            transform: scale(1.05);
+        }
+        100%{
+            transform: translate(0);
+        }
+    }
+    #input:active{
+        animation: yes 0.3s;
+    }
+    .footer{
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        height: 80px;
+        width: 100%;
+        background-color: rgb(47, 52, 46);
+    }
+   </style>
+</head>
+<body id="body">
+    <div>
+        <nav id="e">
+            <a id="a" class="nav4" href="https://mail.google.com/" target="_blank">Gmail</a>
+            <a id="b" href="https://www.google.com/imghp?hl=en&tab=ri&ogbl" target="_blank">Gambar</a>
+            <a onclick="playaudio()" id="c" href="#" >🗿</a>
+            <audio id="yes" src="audio.mp3"></audio>
+             <script>
+                function playaudio(){
+                    var audio = document.getElementById("yes")
+                    audio.play();
+                }
+             </script>
+            <a id="d" href="https://accounts.google.com/" target="_blank">Log in</a>
+        </nav>
+    <div class="div">
+        <img src="google.png" alt="google">
+            <div class="div2">
+                <form action="https://www.google.com/search" method="get">
+                     <input type="text" id="input" name="q" placeholder="Search Google or type an URL">
+                </form>
+                <div>
+                    <button id="buttons" class="yee"> Search</button>
+                    <button id="button2" class="wee"> Im Feeling Lucky</button>
+                    
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="footer">
+            <button class="button" id="ae" onclick="dosomething()">Customize Chrome</button>
+            <script>
+            var eleement =  document.getElementById("ae")
+            var button =  document.getElementById("buttons")
+            var button2 = document.getElementById("button2")
+            function dosomething(){
+                document.getElementById("body").style.backgroundColor = "white";
+                document.getElementById("input").style.boxShadow = "5px 5px 7px darkgrey"
+                eleement.style.backgroundColor = "white";
+                eleement.style.boxShadow = "5px 5px 10px grey"
+                eleement.style.color = "grey"
+                document.getElementById("a").style.color = "grey"
+                document.getElementById("b").style.color = "grey"
+                document.getElementById("c").style.color = "grey"
+                document.getElementById("d").style.color = "grey"
+                button.style.backgroundColor ="white"
+                button.style.boxShadow = "5px 5px 10px darkgrey"
+                button.style.color = "grey"
+                button2.style.backgroundColor ="white"
+                button2.style.boxShadow = "5px 5px 10px darkgrey"
+                button2.style.color = "grey"
+                document.getElementById("ae").innerHTML = "if u want it back pls refresh i dont know how to code this yet"
+                document.getElementById("ae").style.width = "400px"
+            }
+            // lol maaf banyak nian kodenya blm tau how javascript kerja 
+         </script>
+         </div>
+        </footer>
+    </div>
+</body>
+</html>
